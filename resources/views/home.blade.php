@@ -7,7 +7,7 @@
             <div class="row">
                 
                 <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
-                    <caixa qtd="178" titulo="Artigo" cor="orange" icone="ion ion-stats-bars" url="#"></caixa>
+                    <caixa qtd="178" titulo="Artigo" cor="orange" icone="ion ion-stats-bars" url="{{route('artigos.index')}}"></caixa>
                 </div>
                 <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
                     <caixa qtd="50" titulo="Usuarios" cor="grey" icone="ion ion-ios-people" url="#"></caixa>
