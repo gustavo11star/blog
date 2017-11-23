@@ -3,32 +3,20 @@
 @section('content')
     <pagina tamanho="12">
         <painel titulo="Listagem de Artigos" cor="panel-success">
-            <a href="#">Novo</a>
-            <div class="table-responsive">
-                <table class="table table-hover table-striped">
-                    <thead>
-                        <tr>
-                            <th>#</th>
-                            <th>Titulo</th>
-                            <th>Descrição</th>
-                            <th>Autor</th>
-                            <th>Data</th>
-                            <th>Ação</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <th>1</th>
-                            <th>Titulo</th>
-                            <th>Descrição</th>
-                            <th>Autor</th>
-                            <th>Data</th>
-                            <th>Ação</th>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
+            <tabela-lista 
+                v-bind:titulos="['#','Titulo','Descrição']"
+                v-bind:itens="[['1','PHP','Curso de PHP OO'],['2','Java','Curso de Java OO']]"
+                criar="#criar" detalhe="#detalhe" editar="#criar" deletar="#deletar" token="123413412341"
+            ></tabela-lista>
             
         </painel>
     </pagina>
 @endsection
+
+
+
+    
+
+    
+
+
