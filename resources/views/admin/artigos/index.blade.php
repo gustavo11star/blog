@@ -4,40 +4,34 @@
     <pagina tamanho="12">
         <painel titulo="Listagem de Artigos" cor="panel-success">
             <migalhas v-bind:lista="{{$listaMigalhas}}"></migalhas>
-            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#novo">Novo</button>
-            
+            <modal-likn tipo="button" nome="novo" titulo="Novo" cssBtn=""></modal-likn>
             <tabela-lista 
                 v-bind:titulos="['#','Titulo','Descrição']"
                 v-bind:itens="[['1','PHP','Curso de PHP OO'],['2','Java','Curso de Java OO']]"
                 ordem = "asc" ordemcol = "2"
-                criar="#criar" detalhe="#detalhe" editar="#criar" deletar="#deletar" token="123413412341"
-            ></tabela-lista>
+                criar="#criar" detalhe="#detalhe" editar="#criar" deletar="#deletar" token="123413412341">
+            </tabela-lista>
             
         </painel>
     </pagina>
     <modal nome="novo">
-        <paine titulo="Adicionar" cor="painel-success">
-            <form>
+        <painel titulo="Adicionar" cor="painel-success">
+            <formulario cssForm="" action="" method="" enctype="" token="">
                 <div class="form-group">
-                    <label for="exampleInputEmail1">Email address</label>
-                    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
+                    <label class="control-label">Titulo</label>
+                    <input type="text" class="form-control"  placeholder="Digite um titulo">
                 </div>
                 <div class="form-group">
-                    <label for="exampleInputPassword1">Password</label>
-                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                    <label class="control-label">Descrição</label>
+                    <input type="text" class="form-control"  placeholder="Digite uma descrição">
                 </div>
                 <div class="form-group">
                     <label for="exampleInputFile">File input</label>
                     <input type="file" id="exampleInputFile">
                     <p class="help-block">Example block-level help text here.</p>
                 </div>
-                <div class="checkbox">
-                    <label>
-                    <input type="checkbox"> Check me out
-                    </label>
-                </div>
-                <button type="submit" class="btn btn-default">Submit</button>
-            </form>
+                <button type="submit" class="btn btn-info">Adicionar</button>
+            </formulario>
         </painel>
     </modal>
 @endsection
